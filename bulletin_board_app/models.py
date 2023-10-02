@@ -29,7 +29,7 @@ class Advert(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     city = models.ForeignKey(City, on_delete=models.CASCADE, verbose_name='Город')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
-    views = models.PositiveIntegerField()
+    views = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title
